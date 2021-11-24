@@ -21,7 +21,7 @@ class Client extends SignIn {
 }
 
 const theFlash = new Client(
-   "barry",
+   "Barry Allen",
    new Date("1998-01-01"),
    "theflash@gmail.com",
    "StarLabs"

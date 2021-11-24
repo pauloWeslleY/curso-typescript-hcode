@@ -12,6 +12,6 @@ class Client extends SignIn {
         this.company = company;
     }
 }
-const theFlash = new Client("barry", new Date("1998-01-01"), "theflash@gmail.com", "StarLabs");
+const theFlash = new Client("Barry Allen", new Date("1998-01-01"), "theflash@gmail.com", "StarLabs");
 console.log(theFlash);
 //# sourceMappingURL=class_heranca.js.map
