@@ -1,0 +1,1 @@
+{"version":3,"file":"interface_extends.js","sourceRoot":"","sources":["../scripts/interface_extends.ts"],"names":[],"mappings":";AAiBA,MAAM,GAAG,GAAa;IACnB,IAAI,EAAE,UAAU;IAChB,EAAE,EAAE,CAAC;IACL,KAAK,EAAE,sBAAsB;IAC7B,KAAK,EAAE,QAAQ;IACf,UAAU,EAAE,IAAI,IAAI,EAAE,CAAC,OAAO,EAAE;IAChC,UAAU,EAAE,IAAI,IAAI,EAAE,CAAC,OAAO,EAAE;CAClC,CAAA;AAED,OAAO,CAAC,GAAG,CAAC,GAAG,CAAC,CAAA"}
