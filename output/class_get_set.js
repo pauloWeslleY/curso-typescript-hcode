@@ -14,8 +14,7 @@ class PermissionOne {
         this._name = newName;
     }
 }
-const permissionTwo = new PermissionOne("Administrator", 1);
-console.log(permissionTwo.name);
-permissionTwo.name = 'Mom';
-console.log(permissionTwo.name);
+const onPermission = new PermissionOne("Administrator", 1);
+console.log(onPermission.name);
+console.log(onPermission.name);
 //# sourceMappingURL=class_get_set.js.map

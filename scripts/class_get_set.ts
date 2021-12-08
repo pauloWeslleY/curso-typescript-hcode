@@ -8,20 +8,19 @@ class PermissionOne {
       return this._name.toUpperCase();
    }
 
-   set name(newName) {
+   set name(newName: string) {
       if (newName.length < 5) {
-         throw new Error("The name on permission should must be five letter!")
+         throw new Error("The name on permission should must be five letter!");
       }
       this._name = newName;
    }
 }
 
-const permissionTwo = new PermissionOne("Administrator", 1);
-console.log(permissionTwo.name);
+const onPermission = new PermissionOne("Administrator", 1);
+console.log(onPermission.name);
 // try {
-//    permissionTwo.name = 'Mom';
+//    onPermission.name = 'Mom';
 // } catch (e) {
-//    console.log(e);
+//    console.log(e.message);
 // }
-permissionTwo.name = 'Mom';
-console.log(permissionTwo.name);
+console.log(onPermission.name);
