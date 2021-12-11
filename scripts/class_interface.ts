@@ -1,3 +1,12 @@
+interface IEmail {
+   name: string;
+   email: string;
+}
+
+interface ICellphone {
+   number: string;
+}
+
 interface INotifications {
    send(user: MyUserOne): boolean;
 }
@@ -10,43 +19,43 @@ interface MyUserOne{
 }
 
 abstract class Notify {
-   abstract send(user: MyUserOne): boolean;
+   abstract send(): boolean;
 }
 
-class EmailOne extends Notify implements INotifications {
-   send(user: MyUserOne): boolean {
-      console.log(`Sending e-mail for user ${user.email} ...`);
+class EmailOne extends Notify implements INotifications, IEmail {
+   name: string;
+   email: string;
+   constructor(user: MyUserOne) {
+      super();
+      this.name = user.name;
+      this.email = user.email;
+   }
+   send(): boolean {
+      console.log(`Sending e-mail for user ${this.email} ...`);
       return true;
    }
 }
 
-class SMS extends Notify {
-   send(user: MyUserOne): boolean {
-      console.log(`Sending SMS for user ${user.cellphone} ...`);
+class SMS extends Notify implements INotifications, ICellphone {
+   number: string;
+   constructor(user: MyUserOne) {
+      super();
+      this.number = user.cellphone;
+   }
+   send(): boolean {
+      console.log(`Sending SMS for user ${this.number} ...`);
       return true;
    }
 }
 
-class AndroidOne extends Notify {
-   send(user: MyUserOne): boolean {
-      console.log(`Sending message for user android ${user.idAndroid} ...`);
-      return true;
-   }
-}
-
-new EmailOne().send({
+new EmailOne({
    name: 'Barry',
    email: 'theflash@gmail.com',
    cellphone: '11 945663216'
-});
-new SMS().send({
+}).send();
+
+new SMS({
    name: 'Barry',
    email: 'theflash@gmail.com',
    cellphone: '11 945663216'
-});
-new AndroidOne().send({
-   name: 'Barry',
-   email: 'theflash@gmail.com',
-   cellphone: '11 945663216',
-   idAndroid: 'IOS'
-});
+}).send();

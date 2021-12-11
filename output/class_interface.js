@@ -2,37 +2,34 @@
 class Notify {
 }
 class EmailOne extends Notify {
-    send(user) {
-        console.log(`Sending e-mail for user ${user.email} ...`);
+    constructor(user) {
+        super();
+        this.name = user.name;
+        this.email = user.email;
+    }
+    send() {
+        console.log(`Sending e-mail for user ${this.email} ...`);
         return true;
     }
 }
 class SMS extends Notify {
-    send(user) {
-        console.log(`Sending SMS for user ${user.cellphone} ...`);
+    constructor(user) {
+        super();
+        this.number = user.cellphone;
+    }
+    send() {
+        console.log(`Sending SMS for user ${this.number} ...`);
         return true;
     }
 }
-class AndroidOne extends Notify {
-    send(user) {
-        console.log(`Sending message for user android ${user.idAndroid} ...`);
-        return true;
-    }
-}
-new EmailOne().send({
+new EmailOne({
     name: 'Barry',
     email: 'theflash@gmail.com',
     cellphone: '11 945663216'
-});
-new SMS().send({
+}).send();
+new SMS({
     name: 'Barry',
     email: 'theflash@gmail.com',
     cellphone: '11 945663216'
-});
-new AndroidOne().send({
-    name: 'Barry',
-    email: 'theflash@gmail.com',
-    cellphone: '11 945663216',
-    idAndroid: 'IOS'
-});
+}).send();
 //# sourceMappingURL=class_interface.js.map
