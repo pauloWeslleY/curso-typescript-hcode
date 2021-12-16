@@ -1,4 +1,4 @@
-// const WorkBench = require("./classes/Database")
+// const WorkBench = require("./classes/Database");
 import { WorkBench } from './classes/Database';
 
 const conectBank = WorkBench.factory({
