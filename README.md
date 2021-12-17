@@ -41,4 +41,8 @@ O objetivo dos namespaces é muito similar ao que já
 conhecemos dos módulos.´
 ## => MIXINS
 ## => GENERICS
+´Generics nos permitem criar estruturas que serão adaptáveis
+a vários tipos de dados.
+Esse conceito nos ajuda a reaproveitar melhor nosso código e
+torná-lo flexível para diversas situações.´
 ## => DECORATORS
