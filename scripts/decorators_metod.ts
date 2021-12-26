@@ -10,7 +10,7 @@ function decoratorMetodo(target: unknown, propertyKey: string, descriptor: Prope
 }
 
 class DealMessage {
-   @decoratorMetodo
+   // @decoratorMetodo
    tellMessage(...posts: string[]) {
       return posts;
    }
