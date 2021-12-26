@@ -7,5 +7,5 @@ function showQuantityAll<Hcode extends IHcode>(value: Hcode): Hcode {
    return value;
 }
 
-console.log(showQuantityAll([6, 3, 3]));
-console.log(showQuantityAll({ name: 'Harrison', length: 1 }));
+console.log(showQuantityAll([2, 3, 5, 8]));
+console.log(showQuantityAll({ name: 'The Flash', length: 1 }));
