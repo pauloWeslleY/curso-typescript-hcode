@@ -46,3 +46,9 @@ a vários tipos de dados.
 Esse conceito nos ajuda a reaproveitar melhor nosso código e
 torná-lo flexível para diversas situações.´
 ## => DECORATORS
+Decorators é um recurso que nos permite realizar
+modificações em partes de nossos códigos no momento de
+sua execução.
+Podemos dizer que eles são como uma anotação adicionada
+ao código que permite uma modificação em seu
+comportamento
