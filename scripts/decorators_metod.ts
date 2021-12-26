@@ -1,11 +1,16 @@
-function decoratorMetod(target: unknown, propertyKey: string, descriptor: PropertyDecorator) {
-   descriptor.value = (...args: string[]) => {
-      return args.map(item => item.toLowerCase());
-   };
+function decoratorMetodo(target: unknown, propertyKey: string, descriptor: PropertyDecorator) {
+   console.log({
+      target,
+      propertyKey,
+      descriptor
+   });
+   // descriptor.value = (...args: string[]) => {
+   //    return args.map(item => item.toLowerCase());
+   // };
 }
 
 class DealMessage {
-   @decoratorMetod
+   @decoratorMetodo
    tellMessage(...posts: string[]) {
       return posts;
    }

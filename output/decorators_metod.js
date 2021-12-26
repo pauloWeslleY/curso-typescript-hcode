@@ -5,10 +5,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-function decoratorMetod(target, propertyKey, descriptor) {
-    descriptor.value = (...args) => {
-        return args.map(item => item.toLowerCase());
-    };
+function decoratorMetodo(target, propertyKey, descriptor) {
+    console.log({
+        target,
+        propertyKey,
+        descriptor
+    });
 }
 class DealMessage {
     tellMessage(...posts) {
@@ -16,7 +18,7 @@ class DealMessage {
     }
 }
 __decorate([
-    decoratorMetod
+    decoratorMetodo
 ], DealMessage.prototype, "tellMessage", null);
 const instance = new DealMessage();
 console.log(instance.tellMessage("Hi", "Your Welcome", "Hcode"));
